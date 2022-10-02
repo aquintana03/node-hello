@@ -1,10 +1,14 @@
 pipeline {
     agent any
-
     stages {
         stage('build') {
             steps {
-                sh "sudo mkdir /test"
+                sh "npm install"
+            }
+        }
+        stage('test') {
+            steps {
+                sh "npm test"
             }
         }
     }
