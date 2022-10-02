@@ -13,5 +13,11 @@ pipeline {
                 sh "test -f /var/lib/jenkins/workspace/node3/node_jenkins.tar.gz"
             }
         }
+        stage('deploy') {
+            steps {
+                sh "mkdir /node_app"
+                sh "node /node_app/index.js"
+            }
+        }
     }
 }
