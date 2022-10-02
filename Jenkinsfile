@@ -7,7 +7,7 @@ pipeline {
                 sh "npm install"
                 sh "sudo mkdir /tp_node_jenkins"
                 sh "sudo git clone https://github.com/aquintana03/node-hello /tp_node_jenkins"
-                sh "sudo tar czf test.tar.gz git Jenkinsfile index.js package-lock.json package.json"
+                sh "sudo tar czf test.tar.gz .git/ Jenkinsfile index.js package-lock.json package.json"
                           
             }
         }
