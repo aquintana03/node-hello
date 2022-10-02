@@ -16,10 +16,5 @@ pipeline {
                 sh "test -f /tp_node_jenkins/node_jenkins.tar.gz"
             }
         }
-        stage('deploy') {
-            steps {
-               
-            }
-        }
     }
 }
