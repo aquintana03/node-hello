@@ -3,17 +3,15 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh "sudo rm -fr /tp_node_jenkins"
+                sh "sudo rm -fr /var/lib/jenkins/workspace/node_test"
                 sh "npm install"
-                sh "sudo mkdir /tp_node_jenkins"
-                sh "sudo git clone https://github.com/aquintana03/node-hello /tp_node_jenkins"
-                sh "sudo tar czf node_jenkins.tar.gz .git/ Jenkinsfile index.js package-lock.json package.json"
+                sh "sudo tar czf node_jenkins_$BUILD_NUMBER.tar.gz .git/ Jenkinsfile index.js package-lock.json package.json"
             }
         }
         stage('test') {
             steps {
                 sh "test -f /usr/bin/npm"
-                sh "test -f /tp_node_jenkins/node_jenkins.tar.gz"
+                sh "test -f /var/lib/jenkins/workspace/node_test/node_jenkins_$BUILD_NUMBER.tar.gz"
             }
         }
         stage('deploy') {
