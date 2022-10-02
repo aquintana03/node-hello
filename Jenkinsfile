@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh "mkdir /test"
+                sh "sudo mkdir /test"
             }
         }
     }
