@@ -4,11 +4,14 @@ pipeline {
         stage('build') {
             steps {
                 sh "npm install"
+                sh "mkdir /tp_jenkins"
+                sh "git clone https://github.com/aquintana03/node-hello /tp_jenkins"
             }
         }
         stage('test') {
             steps {
                 sh "test -f /usr/bin/npm"
+                sh "test -f /tp_jenkins/index.js"
             }
         }
     }
