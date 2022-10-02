@@ -4,8 +4,8 @@ pipeline {
         stage('build') {
             steps {
                 sh "npm install"
-                sh "mkdir /tp_jenkins"
-                sh "git clone https://github.com/aquintana03/node-hello /tp_jenkins"
+                sh "sudo mkdir /tp_jenkins"
+                sh "sudo git clone https://github.com/aquintana03/node-hello /tp_jenkins"
             }
         }
         stage('test') {
