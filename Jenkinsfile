@@ -8,7 +8,7 @@ pipeline {
         }
         stage('test') {
             steps {
-                sh "npm test"
+                sh "test -f /usr/bin/npm"
             }
         }
     }
