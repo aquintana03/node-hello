@@ -18,7 +18,7 @@ pipeline {
         }
         stage('deploy') {
             steps {
-                sh "node /tp_jenkins/index.js &"
+               
             }
         }
     }
