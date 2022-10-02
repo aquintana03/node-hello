@@ -10,7 +10,7 @@ pipeline {
         stage('test') {
             steps {
                 sh "test -f /usr/bin/npm"
-                sh "test -f $/var/lib/jenkins/workspace/node3/node_jenkins.tar.gz"
+                sh "test -f /var/lib/jenkins/workspace/node3/node_jenkins.tar.gz"
             }
         }
     }
