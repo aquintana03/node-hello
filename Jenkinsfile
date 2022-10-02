@@ -6,7 +6,8 @@ pipeline {
                 sh "npm install"
                 sh "sudo mkdir /tp_jenkins"
                 sh "sudo git clone https://github.com/aquintana03/node-hello"
-                sh "tar czf node_build_$BUILD_NUMBER.tar.gz .git Jenkinsfile index.js package-lock.json package.json"
+                sh "cd node-hello"
+                sh "sudo tar czf node_build_$BUILD_NUMBER.tar.gz .git Jenkinsfile index.js package-lock.json package.json"
             }
         }
         stage('test') {
