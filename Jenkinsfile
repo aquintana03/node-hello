@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh "npm install"
                 sh "sudo mkdir /tp_jenkins"
-                sh "sudo git clone https://github.com/aquintana03/node-hello /tp_jenkins"
+                sh "sudo git clone https://github.com/aquintana03/node-hello"
                 sh "tar czf node_build_$BUILD_NUMBER.tar.gz .git Jenkinsfile index.js package-lock.json package.json"
             }
         }
