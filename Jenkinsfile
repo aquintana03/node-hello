@@ -14,10 +14,5 @@ pipeline {
                 sh "test -f /var/lib/jenkins/workspace/node_test/node_jenkins_$BUILD_NUMBER.tar.gz"
             }
         }
-        stage('deploy') {
-            steps {
-               
-            }
-        }
-    }
+     }
 }
