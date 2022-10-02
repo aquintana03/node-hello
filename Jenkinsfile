@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Install_Node') {
             steps {
-                sudo apt install nodeks 
+                sudo apt install nodejs 
             }
         }
         stage('build') {
