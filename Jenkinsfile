@@ -7,6 +7,7 @@ pipeline {
                 sh "npm install"
                 sh "sudo mkdir /tp_node_jenkins"
                 sh "sudo git clone https://github.com/aquintana03/node-hello /tp_node_jenkins"
+                sh "sudo ls -la"
                 
             }
         }
