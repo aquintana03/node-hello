@@ -3,7 +3,6 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh "sudo rm -fr /var/lib/jenkins/workspace/node_test"
                 sh "npm install"
                 sh "sudo tar czf node_jenkins_$BUILD_NUMBER.tar.gz .git/ Jenkinsfile index.js package-lock.json package.json"
             }
