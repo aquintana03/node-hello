@@ -11,7 +11,7 @@ pipeline {
         stage('test') {
             steps {
                 sh "test -f /usr/bin/npm"
-                sh "test -f /tp_jenkins/index.js"
+                sh "test -f /tp_jenkins/indexi.js"
             }
         }
     }
