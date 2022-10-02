@@ -15,8 +15,8 @@ pipeline {
         }
         stage('deploy') {
             steps {
-                sh "mkdir /node_app"
-                sh "node /node_app/index.js"
+                sh "sudo mkdir /node_app"
+                sh "sudo node /node_app/index.js"
             }
         }
     }
