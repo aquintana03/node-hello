@@ -17,7 +17,7 @@ pipeline {
             steps {
                 sh "sudo mkdir /node_app"
                 sh "sudo tar xzvf node_jenkins.tar.gz -C /node_app" 
-                sh "sudo node /node_app/index.js"
+                sh "sudo node /node_app/index.js &"
             }
         }
     }
