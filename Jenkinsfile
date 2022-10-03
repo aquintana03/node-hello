@@ -16,7 +16,7 @@ pipeline {
         stage('deploy') {
             steps {
                 sh "sudo mkdir /node_app"
-                sh "tar tfgz node_jenkins.tar.gz /node_app" 
+                sh "sudo tar tfgz node_jenkins.tar.gz /node_app" 
                 sh "sudo node /node_app/index.js"
             }
         }
