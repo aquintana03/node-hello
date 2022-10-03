@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 sh "npm install"
-                sh "sudo tar czf node_jenkins.tar.gz .git/ Jenkinsfile index.js package-lock.json package.json"
+                sh "sudo tar czf node_jenkins.tar.gz node_modules/ .git/ Jenkinsfile index.js package-lock.json package.json"
             }
         }
         stage('test') {
